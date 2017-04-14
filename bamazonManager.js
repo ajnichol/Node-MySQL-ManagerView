@@ -160,7 +160,7 @@ function newProduct(){
 		{
 			name: "id",
 			type: "input",
-			message: "Create an ID for the product (ID has to be above #10)"
+			message: "Create an ID for the product (ID has to be above #11)"
 		},
 		{
 			name: "product",

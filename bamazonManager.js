@@ -186,14 +186,10 @@ function newProduct(){
 			var addID = parseInt(response.id);
 			var addProduct = response.product;
 			var addDepartment = response.department;
-			var addPrice = parseInt(response.price);
+			var addPrice = parseInt(response.price).toFixed(2);
 			var addAmount = parseInt(response.amount);
-			console.log(addID);
-			console.log(addProduct);
-			console.log(addDepartment);
-			console.log(addPrice);
-			console.log(addAmount);
-			connection.query("INSERT INTO products VALUES " + (addID, addProduct, addDepartment, addPrice, addAmount), function(error, results){
+			var query = "INSERT INTO products SET ?";
+			connection.query(query, {item_id: addID, product_name: addProduct, department_name: addDepartment, price: addPrice, stock_quantity: addAmount}, function(error, results){
 				if(error){
 					console.log(error);
 				}else{

@@ -141,9 +141,6 @@ function addInventory(){
 				var newID = splitID[1];
 				var productName = splitName[1];
 				var updateAmount = parseInt(response.number);
-				console.log(updateAmount);
-				console.log(newID);
-				console.log(productName);
 
 				for(var i = 0; i < results.length; i++){
 					if(newID == results[i].item_id && productName == results[i].product_name){
